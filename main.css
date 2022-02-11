@@ -26,16 +26,29 @@ body {
   transform: translate(-50%, -50%);
   margin: 0;
   font-weight: bold;
+}
+
+h1 {
   font-size: 3rem;
 }
 
-.logo:hover ~ .header span {
+.logo:hover ~ .header h1 {
   display: none;
 }
 
 .logo:hover ~ .header:after {
   font-size: 3rem;
   content: "launching soon";
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }
 
 .about {
@@ -56,9 +69,9 @@ body {
   top: 52%;
 }
 
-.about:hover ~ .moon {
+.logo:hover ~ .moon {
   display: initial;
-  animation: tomoon 3s linear forwards;
+  animation: tomoon 6s linear forwards;
 }
 
 @keyframes tomoon {
@@ -66,10 +79,10 @@ body {
     left: 0%;
   }
   99% {
-    left: 120%;
+    left: 400%;
   }
   100% {
-    left: 130%;
+    left: 420%;
     display: none;
   }
 }
