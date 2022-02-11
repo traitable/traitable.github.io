@@ -34,10 +34,12 @@ h1 {
   font-size: 3rem;
 }
 
+.header:hover h1,
 .logo:hover ~ .header h1 {
   display: none;
 }
 
+.header:hover:after,
 .logo:hover ~ .header:after {
   font-size: 3rem;
   content: "launching soon";
