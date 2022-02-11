@@ -1,0 +1,90 @@
+body {
+  background-color: #0b0d39;
+  color: white;
+  cursor: default;
+  overflow: hidden;
+  font-family: helvetica;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
+.logo {
+  margin: 1rem 2rem;
+  cursor: pointer;
+}
+
+.header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.logo:hover ~ .header span {
+  display: none;
+}
+
+.logo:hover ~ .header:after {
+  font-size: 3rem;
+  content: "launching soon";
+}
+
+.about {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: helvetica;
+  font-size: 1rem;
+  line-height: 0.75rem;
+  text-align: center;
+}
+
+.moon {
+  display: none;
+  position: absolute;
+  top: 52%;
+}
+
+.about:hover ~ .moon {
+  display: initial;
+  animation: tomoon 3s linear forwards;
+}
+
+@keyframes tomoon {
+  0% {
+    left: 0%;
+  }
+  99% {
+    left: 120%;
+  }
+  100% {
+    left: 130%;
+    display: none;
+  }
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  user-select: initial;
+}
+
+footer {
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  margin: 2rem;
+  font-size: 0.75rem;
+  color: #7973b1;
+}
